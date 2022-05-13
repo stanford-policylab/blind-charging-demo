@@ -17,7 +17,7 @@ python3 -m venv blind-charging-env
 source blind-charging-env/bin/activate
 ```
 
-Then, within this virtual environment, run in your terminal:
+Then, with this virtual environment activated, run in your terminal:
 
 ```
 pip install blindcharging_demo-1.0.0-py3-none-any.whl
@@ -27,7 +27,7 @@ This will make the `blindcharging` (demo) module available to Python.
 
 ## Testing
 
-To verify that the blind charging demo module has successfully installed, try running the test file within the virtual environment:
+To verify that the blind charging demo module has successfully installed, try running the test file with the above virtual environment activated:
 
 ```
 python test_file.py
