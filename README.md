@@ -20,20 +20,26 @@ source blind-charging-env/bin/activate
 Then, with this virtual environment activated, run in your terminal:
 
 ```
-pip install blindcharging_demo-1.0.0-py3-none-any.whl
+pip install blind_charging_demo-1.0.1-py3-none-any.whl
 ```
 
-This will make the `blindcharging` (demo) module available to Python.
+This will make the `blindcharging` demo module available to Python.
 
 ## Testing
 
-To verify that the blind charging demo module has successfully installed, try running the test file with the above virtual environment activated:
+To verify that the blind charging demo module has successfully installed, try running the following from within the virtual environment (you can change the `unredacted` argument to any string):
+
+```
+python -m blindcharging --unredacted "This is a demo narrative."
+```
+
+You can also try running the test file, again from within the virtual environment:
 
 ```
 python test_file.py
 ```
 
-Successful execution of the test file will produce the following output:
+Successful execution will produce the following output:
 
 ```
 Unredacted narrative text: This is a demo narrative.
