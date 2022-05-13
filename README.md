@@ -20,7 +20,7 @@ source blind-charging-env/bin/activate
 Then, with this virtual environment activated, run in your terminal:
 
 ```
-pip install blind_charging_demo-1.0.1-py3-none-any.whl
+pip install blindcharging_demo-1.0.2-py3-none-any.whl
 ```
 
 This will make the `blindcharging` demo module available to Python.
