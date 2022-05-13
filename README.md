@@ -10,7 +10,13 @@ our actual redaction algorithm.
 
 Our module runs on `Python` using version 3.7 or higher.
 
-To install the Python module, you need to run in your terminal:
+To install the Python module, you need to first create and then activate a virtual environment using something like the following:
+```
+python3 -m venv blind_charging_env
+source blind_charging_env/bin/activate
+```
+
+Then, within this virtual environment, run in your terminal:
 
 ```
 pip install blindcharging_demo-1.0.0-py3-none-any.whl
@@ -70,7 +76,7 @@ print("Redacted narrative text:", result.redacted)
 print("Annotations:", result.annotations)
 ```
 
-## Development
+## Development (for Stanford reference only)
 
 These are the steps to build a new wheel. (They are the same as many other
 Python projects.)
