@@ -33,12 +33,6 @@ To verify that the blind charging demo module has successfully installed, try ru
 python -m blindcharging --unredacted "This is a demo narrative."
 ```
 
-You can also try running the test file, again from within the virtual environment:
-
-```
-python test_file.py
-```
-
 Successful execution will produce the following output:
 
 ```
