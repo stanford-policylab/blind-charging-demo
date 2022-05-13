@@ -8,12 +8,13 @@ our actual redaction algorithm.
 
 ## Install
 
-Our module runs on `Python` using version 3.7 or higher.
+Our module runs on `Python` using version 3.7 or higher. **However**, for the purposes of this test module, you will need to use Python 3.9 or higher.
 
 To install the Python module, you need to first create and then activate a virtual environment using something like the following:
+
 ```
-python3 -m venv blind_charging_env
-source blind_charging_env/bin/activate
+python3 -m venv blind-charging-env
+source blind-charging-env/bin/activate
 ```
 
 Then, within this virtual environment, run in your terminal:
@@ -24,7 +25,23 @@ pip install blindcharging_demo-1.0.0-py3-none-any.whl
 
 This will make the `blindcharging` (demo) module available to Python.
 
-## Usage
+## Testing
+
+To verify that the blind charging demo module has successfully installed, try running the test file within the virtual environment:
+
+```
+python test_file.py
+```
+
+Successful execution of the test file will produce the following output:
+
+```
+Unredacted narrative text: This is a demo narrative.
+Redacted narrative text: [SECRET] is a demo narrative.
+Annotations: [{'start': 0, 'end': 4, 'content': '[SECRET]', 'extent': 8, 'type': 'redaction', 'info': 'demo redaction'}]
+```
+
+## Details
 
 First, you need to define a `Locale` for your jurisdiction. The `Locale`
 supplies your jurisdiction's local context to the redaction algorithm,
@@ -65,13 +82,16 @@ Now, you can use your `Locale` to redact a narrative.
 ```py
 from blindcharging import redact
 
+demo_narrative = "This is a demo narrative."
+
 result = redact(
     locale=gallo_alto_locale,
-    narrative="This is a demo narrative.",
+    narrative=demo_narrative,
     persons=[...],
     officers=[...],
     )
 
+print("Unredacted narrative text:", demo_narrative)
 print("Redacted narrative text:", result.redacted)
 print("Annotations:", result.annotations)
 ```
