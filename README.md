@@ -10,11 +10,20 @@ our actual redaction algorithm.
 
 Our module runs on `Python` using version 3.7 or higher. **However**, for the purposes of this test module, you will need to use Python 3.9 or higher.
 
-To install the Python module, you need to first create and then activate a virtual environment using something like the following:
+To install the Python module, you need to first create and then activate a virtual environment using the following code. 
+
+On MacOS or Unix:
 
 ```
 python3 -m venv blind-charging-env
 source blind-charging-env/bin/activate
+```
+
+On Windows:
+
+```
+python3 -m venv blind-charging-env
+blind-charging-env\Scripts\activate.bat
 ```
 
 Then, with this virtual environment activated, run in your terminal:
